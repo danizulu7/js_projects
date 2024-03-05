@@ -72,24 +72,6 @@
     transition: opacity 0.3s ease-in 0.4s;
 }
 
-.back-container {
-    margin: 0 40px 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.back-icon {
-    width: 24px;
-    height: 24px;
-}
-
-.sign h6 {
-    color: #121214;
-    font-size: 16px;
-}
-
 @media (width <= 500px) {
     .container {
         margin: 10px;
