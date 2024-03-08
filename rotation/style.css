@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 30px 50px;
+}
+
+.info-container h1 {
+    font-size: 2.5em;
+    color: #81779f;
+}
+
+.info-container small {
+    font-size: 1em;
+    color: #b5afc7;
+    margin: 5px 0;
+}
+
+.info-container p {
+    font-size: 1em;
+    color: #333;
+    margin: 20px 0;
+}
+
+.info-container h3 {
+    font-size: 1.8em;
+    color:#81779f;
+    margin: 0 0 20px;
+}
+
+.info-container img {
+    width: 85vw;
+    height: 50vh;
+}
+
+.menu-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+  
+.menu {
+    background-color: #8468ff;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.menu button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+  
+.menu button:focus {
+    outline: none;
+}
+
+.menu button#open {
+    left: 63%;
+}
+  
+.menu button#close {
+    top: 63%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container {
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 55px;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.container.show-nav .menu {
+    transform: rotate(-70deg);
+}
+
+.back-container {
+    margin: 0 50px 10px !important;
+    position: relative;
+    z-index: 1000000;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  
+.nav-menu {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+  
+.nav-menu ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+  
+.nav-menu ul li {
+    text-transform: uppercase;
+    color: #8468ff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+  
+.nav-menu ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+  
+.nav-menu ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+  
+.nav-menu ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+  
+.nav-menu a{
+    color: #8468ff;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-weight: 900;
+}
+  
+.nav-menu a:hover {
+    color: #81779f;
+    font-weight: bold;
+}
+  
